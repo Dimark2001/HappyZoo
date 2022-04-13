@@ -143,6 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4761332241069408202}
+  - component: {fileID: 3817585915131089336}
   m_Layer: 0
   m_Name: Cash
   m_TagString: Untagged
@@ -166,6 +167,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3817585915131089336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5484814046070657176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6637595, y: 5.4626102, z: 2.7627149}
+  m_Center: {x: 0, y: 2.2313051, z: 0}
 --- !u!1 &8465319458274204821
 GameObject:
   m_ObjectHideFlags: 0
