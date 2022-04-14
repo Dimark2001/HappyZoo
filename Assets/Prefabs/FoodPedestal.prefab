@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resource: {fileID: 0}
-  _givingTime: 1
+  _givingTime: 0.5
   _origin: {fileID: 5992971240510807879}
 --- !u!65 &5376492448505602001
 BoxCollider:

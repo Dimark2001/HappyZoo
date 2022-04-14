@@ -57,8 +57,10 @@ public class Animal : MonoBehaviour
     private void GoTo(Vector3 position)
     {
         NavMeshPath path = new NavMeshPath();
-        _agent.CalculatePath(position, path);
-        _agent.SetPath(path);
+        if (_agent.CalculatePath(position, path))
+            _agent.SetPath(path);
+        else
+            transform.position = position;
     }
     
     private IEnumerator WalkingLoop()

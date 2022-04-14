@@ -43,10 +43,15 @@ public class Paddock : MonoBehaviour
     [SerializeField] private float _maxSatietyTime = 70f;
     [SerializeField] private float _takingTime = 1f;
     [SerializeField] private Transform _foodTakerPosition;
+
+    [SerializeField] private GameObject _arrow;
     
     private bool _isWantToEat = false;
     private TweenerCore<Vector3, Vector3, VectorOptions> _tweenerCore;
+    private int tutor = 0;
 
+    private GameObject arrow1;
+    private GameObject arrow2;
 
     private void Awake()
     {
@@ -61,6 +66,10 @@ public class Paddock : MonoBehaviour
     private void OnEnable()
     {
         OnAte += RestartSatiety;
+
+        tutor = PlayerPrefs.GetInt("Tutorial", 0);
+        PlayerPrefs.SetInt("Tutorial", 1);
+        PlayerPrefs.Save();
     }
 
     private void OnDisable()
@@ -97,6 +106,13 @@ public class Paddock : MonoBehaviour
         Resource resource = resourcesStack.Resources.Find(x => x.Prefab == _necessaryResource.Prefab);
         if (resource == null)
             return;
+        
+        if (tutor == 0)
+        {
+            Destroy(arrow1);
+            Destroy(arrow2);
+            tutor = 1;
+        }
         
         Resource res = Instantiate(_necessaryResource);
         
@@ -145,6 +161,21 @@ public class Paddock : MonoBehaviour
         CountOfResourceChanged?.Invoke();
         _customersZone.IsWork = false;
         OnGetHungry?.Invoke();
+
+        if (tutor == 0)
+        {
+            PlayTutorial();
+        }
+        
+    }
+
+    private void PlayTutorial()
+    {
+        var pedestal = FindObjectOfType<Pedestal>().transform.position + Vector3.up * 7;
+        var paddock = paddockStack.origin.position + Vector3.up * 4;
+
+        arrow1 = Instantiate(_arrow, paddock, Quaternion.identity);
+        arrow2 = Instantiate(_arrow, pedestal, Quaternion.identity);
     }
 
     IEnumerator SatietyLoop()

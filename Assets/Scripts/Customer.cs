@@ -10,6 +10,7 @@ public class Customer : MonoBehaviour
     [SerializeField] private float _watchingTime = 10f;
     [SerializeField] private GameObject _money;
     public Transform homePosition;
+    public bool IsLooking = false;
     
     public List<CustomersZone> _allCustomersZones = new List<CustomersZone>();
     private List<CustomersZone> _availableZones => _allCustomersZones.FindAll(x => x.IsWork && !_passedZones.Contains(x));
@@ -124,14 +125,15 @@ public class Customer : MonoBehaviour
 
     private void SpawnMoney()
     {
-        var money = Instantiate(_money, transform.position, Quaternion.identity);
+        var side = transform.position.x < 0 ? 1 : -1;
+        var money = Instantiate(_money, transform.position + Vector3.right * side * 5, Quaternion.identity);
     }
 
     private IEnumerator PeekNextPositionCoroutine()
     {
         yield return new WaitForSeconds(0.3f);
         
-        int index = _currentZone._customersInQueue.FindIndex(x => x == this); // Тут всё может наебнуться, если индексы не сдвигаются сами
+        int index = _currentZone._customersInQueue.FindIndex(x => x == this); 
 
         TryGoTo(_currentZone._queue[index].position);
         StartCoroutine(PeekNextPositionCoroutine());
@@ -148,6 +150,8 @@ public class Customer : MonoBehaviour
             TryGoTo(position);
 
             var index = customersZone.AddToLookingZone(this);
+
+            IsLooking = true;
 
             for (int i = 0; i < 5; i++)
             {

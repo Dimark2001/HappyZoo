@@ -8,15 +8,35 @@ public class ResourcesStack : MonoBehaviour
     public List<Resource> Resources = new List<Resource>();
     public Action OnStackChanged;
 
+    [SerializeField] private int _maxCount = 12;
     [SerializeField] private Transform _resourceStackOrigin;
+    [SerializeField] private GameObject _maxIndicator;
+
+    private long[] pattern = { 0, 10, 20, 20};
+
+    private void Start()
+    {
+        Vibration.Init();
+    }
 
     public void AddResource(Resource resource)
     {
-        Resource res = Instantiate(resource);
-        // TODO: въебенить анимацию
-        Resources.Add(res);
-        RecalculateHeight();
-        OnStackChanged?.Invoke();
+        if (Resources.Count < _maxCount)
+        {
+            Resource res = Instantiate(resource);
+            Resources.Add(res);
+            RecalculateHeight();
+            OnStackChanged?.Invoke();
+            Vibration.Vibrate(pattern, -1);
+        }
+        else
+        {
+            var height = Resources.Count == 0 ? 0 : Resources.Max(x => x.CurrentHeight) + 1f;
+            var position = _resourceStackOrigin.transform.position + Vector3.up * height;
+
+            _maxIndicator.transform.position = position;
+            _maxIndicator.SetActive(true);
+        }
     }
 
     public bool TryRemoveResource(Resource resource)
@@ -25,6 +45,7 @@ public class ResourcesStack : MonoBehaviour
         {
             if (res.Prefab == resource.Prefab)
             {
+                _maxIndicator.SetActive(false);
                 Destroy(res.gameObject);
                 Resources.Remove(res);
 

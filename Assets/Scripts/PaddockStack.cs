@@ -8,15 +8,17 @@ public class PaddockStack : MonoBehaviour
 {
     public Action Emptied;
     public Vector3 PlaceToStand => origin.position + new Vector3(Random.Range(-4f, 4f),0, Random.Range(-4f, 4f));
-    [SerializeField] private Transform origin;
+    public Transform origin;
     
     private List<Resource> _resources = new List<Resource>();
+    private long[] pattern = { 0, 10, 20, 20};
 
     public void AddResource(Resource resource)
     {
         var res = Instantiate(resource);
         _resources.Add(res);
         UpdateView();
+        Vibration.Vibrate(pattern, -1);
     }
 
     private void RemoveOneResource()

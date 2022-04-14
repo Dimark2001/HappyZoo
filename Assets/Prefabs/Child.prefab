@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _payingTime: 3
-  _watchingTime: 10
+  _watchingTime: 20
   _money: {fileID: 8471766597229258381, guid: dffa9d3c9da9f7c4ca86c7c143cf108f, type: 3}
   homePosition: {fileID: 0}
   _allCustomersZones: []
