@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
@@ -20,16 +21,31 @@ public class BuyZone : MonoBehaviour
     [SerializeField] private GameObject _toDeactivate;
 
     [SerializeField] private CinemachineVirtualCamera _camera;
+    [SerializeField] private GameObject[] _condition;
     
     private PlayerWallet _wallet;
     private TweenerCore<int, int, NoOptions> _tweener;
     private TweenerCore<int, int, NoOptions> _tweener2;
     private float _progress => _currentCost / (float)_totalCost;
 
+    private void Update()
+    {
+        if (_condition.Length == 0 || _condition.All(x => !x.activeInHierarchy))
+        {
+            GetComponent<Collider>().enabled = true;
+            GetComponentInChildren<Canvas>().enabled = true;
+            _countLabel.enabled = true;
+        }
+    }
+
     private void Start()
     {
-        _currentCost = _totalCost;
+        _currentCost = PlayerPrefs.GetInt(GetInstanceID().ToString(), _totalCost);
         UpdateLabel();
+        if (_currentCost == 0)
+        {
+            Buy();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,6 +64,8 @@ public class BuyZone : MonoBehaviour
                 {
                     if (_currentCost == 0)
                     {
+                        PlayerPrefs.SetInt(GetInstanceID().ToString(), _currentCost);
+                        PlayerPrefs.Save();
                         Buy();
                         DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 60, 0.5f);
                     }
@@ -66,6 +84,8 @@ public class BuyZone : MonoBehaviour
             _tweener2.Kill();
             
             DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 60, 0.5f);
+            PlayerPrefs.SetInt(GetInstanceID().ToString(), _currentCost);
+            PlayerPrefs.Save();
         }
     }
     

@@ -15,7 +15,7 @@ public class Pedestal : MonoBehaviour
     {
         if (other.TryGetComponent(out ResourcesStack resourcesStack))
         {
-            if (_tweenerCore == null || !_tweenerCore.active)
+            if ((_tweenerCore == null || !_tweenerCore.active) && !resourcesStack.IsFull)
             {
                 SpawnAndMoveResource(resourcesStack);
             }
@@ -48,6 +48,12 @@ public class Pedestal : MonoBehaviour
             .OnComplete(() =>
             {
                 resourcesStack.AddResource(_resource);
+                if (resourcesStack.IsFull)
+                {
+                    _tweenerCore.Kill();
+                    return;
+                }
+
                 SpawnAndMoveResource(resourcesStack);
             })
             .OnKill(() =>

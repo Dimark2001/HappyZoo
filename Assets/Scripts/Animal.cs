@@ -41,26 +41,31 @@ public class Animal : MonoBehaviour
 
     private void GoHome()
     {
-        GoTo(_homePoint.position);
+        if (!GoTo(_homePoint.position))
+        {
+            transform.position = _homePoint.position;
+        }
         _hungry = true;
     }
 
     private void GoOut()
     {
         var position = _paddock.paddockStack.PlaceToStand;
-        GoTo(position);
-        Debug.Log("Выходят наружу");
+        if (!GoTo(position))
+        {
+            transform.position = _homePoint.position;
+        }
     }
 
     private void BeNotHungry() => _hungry = false;
 
-    private void GoTo(Vector3 position)
+    private bool GoTo(Vector3 position)
     {
         NavMeshPath path = new NavMeshPath();
-        if (_agent.CalculatePath(position, path))
-            _agent.SetPath(path);
-        else
-            transform.position = position;
+        bool result = _agent.CalculatePath(position, path);
+        bool result1 = _agent.SetPath(path);
+
+        return result && result1;
     }
     
     private IEnumerator WalkingLoop()

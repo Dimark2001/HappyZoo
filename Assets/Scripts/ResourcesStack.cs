@@ -7,6 +7,7 @@ public class ResourcesStack : MonoBehaviour
 {
     public List<Resource> Resources = new List<Resource>();
     public Action OnStackChanged;
+    public bool IsFull => Resources.Count >= _maxCount;
 
     [SerializeField] private int _maxCount = 12;
     [SerializeField] private Transform _resourceStackOrigin;
@@ -29,7 +30,7 @@ public class ResourcesStack : MonoBehaviour
             OnStackChanged?.Invoke();
             Vibration.Vibrate(pattern, -1);
         }
-        else
+        if (Resources.Count == _maxCount)
         {
             var height = Resources.Count == 0 ? 0 : Resources.Max(x => x.CurrentHeight) + 1f;
             var position = _resourceStackOrigin.transform.position + Vector3.up * height;

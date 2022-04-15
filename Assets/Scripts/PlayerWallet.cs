@@ -24,6 +24,6 @@ public class PlayerWallet : MonoBehaviour
 
     private void Start()
     {
-        MoneyCount = PlayerPrefs.GetInt("moneyCount", 4000);
+        MoneyCount = PlayerPrefs.GetInt("moneyCount", 5000);
     }
 }

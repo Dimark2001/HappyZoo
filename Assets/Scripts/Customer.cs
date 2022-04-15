@@ -17,12 +17,7 @@ public class Customer : MonoBehaviour
     private List<CustomersZone> _passedZones = new List<CustomersZone>();
 
     [SerializeField] private CustomersZone _currentZone;
-    private NavMeshAgent _agent;
-    
-    private void Awake()
-    {
-        _agent = GetComponent<NavMeshAgent>();
-    }
+    [SerializeField] private NavMeshAgent _agent;
 
     private void Start()
     {
