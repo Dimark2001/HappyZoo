@@ -68,12 +68,12 @@ public class FoodDataCollector : MonoBehaviour
 
     private void UpdateView()
     {
-        if (!_fishIndicator.activeSelf || _fishPaddocks.Any(x => x.gameObject.activeInHierarchy))
+        if (!_fishIndicator.activeSelf && _fishPaddocks.Any(x => x.gameObject.activeInHierarchy))
         {
             _fishIndicator.SetActive(true);
         }
 
-        if (!_meatIndicator.activeSelf || _meatPaddocks.Any(x => x.gameObject.activeInHierarchy))
+        if (!_meatIndicator.activeSelf && _meatPaddocks.Any(x => x.gameObject.activeInHierarchy))
         {
             _meatIndicator.SetActive(true);
         }
