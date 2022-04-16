@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using Cinemachine;
 using TMPro;
