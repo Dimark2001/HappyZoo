@@ -10,6 +10,8 @@ using DG.Tweening.Plugins.Options;
 [RequireComponent(typeof(Collider))]
 public class BuyZone : MonoBehaviour
 {
+    [SerializeField] private int _zoneId = 0;
+
     [SerializeField] private float _openingTime = 3f;
     [SerializeField] private int _totalCost;
     [SerializeField] private int _currentCost;
@@ -39,7 +41,7 @@ public class BuyZone : MonoBehaviour
 
     private void Start()
     {
-        _currentCost = PlayerPrefs.GetInt(GetInstanceID().ToString(), _totalCost);
+        _currentCost = PlayerPrefs.GetInt(_zoneId.ToString(), _totalCost);
         UpdateLabel();
         if (_currentCost == 0)
         {
@@ -63,7 +65,7 @@ public class BuyZone : MonoBehaviour
                 {
                     if (_currentCost == 0)
                     {
-                        PlayerPrefs.SetInt(GetInstanceID().ToString(), _currentCost);
+                        PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
                         PlayerPrefs.Save();
                         Buy();
                         DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 60, 0.5f);
@@ -83,7 +85,7 @@ public class BuyZone : MonoBehaviour
             _tweener2.Kill();
             
             DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 60, 0.5f);
-            PlayerPrefs.SetInt(GetInstanceID().ToString(), _currentCost);
+            PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
             PlayerPrefs.Save();
         }
     }

@@ -2324,6 +2324,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1722701931}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 18000
       objectReference: {fileID: 0}
@@ -3559,6 +3563,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1722701931}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 12000
       objectReference: {fileID: 0}
@@ -3781,6 +3789,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 40000
@@ -4338,6 +4350,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 25000
@@ -11888,7 +11904,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 15.535364, y: 0.3899994, z: 5.7782173}
+  m_ConnectedAnchor: {x: 15.535366, y: 0.3900013, z: 5.7782364}
   m_UseSpring: 1
   m_Spring:
     spring: 50
@@ -39123,6 +39139,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1722701931}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 103
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 30000
       objectReference: {fileID: 0}
@@ -40651,7 +40671,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 13.4992075, y: -0.10000038, z: 5.4140496}
+  m_ConnectedAnchor: {x: 13.4992075, y: -0.10000801, z: 5.4140344}
   m_UseSpring: 1
   m_Spring:
     spring: 20
@@ -41150,6 +41170,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 104
+      objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 40000
@@ -42986,6 +43010,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1722701931}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 20000
       objectReference: {fileID: 0}
@@ -44641,6 +44669,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 3000
@@ -48683,6 +48715,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1722701931}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 40000
       objectReference: {fileID: 0}
@@ -49992,6 +50028,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 25000
@@ -53799,6 +53839,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1722701931}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 12000
       objectReference: {fileID: 0}
@@ -56554,6 +56598,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 5000
@@ -62159,6 +62207,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1722701931}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 18000
       objectReference: {fileID: 0}
@@ -67246,6 +67298,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1722701931}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 10000
       objectReference: {fileID: 0}
@@ -69942,6 +69998,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 5000
@@ -76963,7 +77023,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 13.4992075, y: -0.10000038, z: 5.4140344}
+  m_ConnectedAnchor: {x: 13.4992075, y: -0.10000801, z: 5.4140344}
   m_UseSpring: 1
   m_Spring:
     spring: 20
@@ -80248,6 +80308,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: _zoneId
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _totalCost
       value: 4000
