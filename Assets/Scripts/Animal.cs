@@ -53,7 +53,7 @@ public class Animal : MonoBehaviour
         var position = _paddock.paddockStack.PlaceToStand;
         if (!GoTo(position))
         {
-            transform.position = _homePoint.position;
+            transform.position = position;
         }
     }
 

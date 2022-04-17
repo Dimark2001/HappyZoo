@@ -14287,13 +14287,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386671900}
-  m_LocalRotation: {x: -0, y: -0, z: 0.15945393, w: 0.9872054}
-  m_LocalPosition: {x: -0.3, y: -0.87, z: -0.0000038146973}
+  m_LocalRotation: {x: -0, y: -0, z: 0.25150734, w: 0.96785545}
+  m_LocalPosition: {x: 0.11, y: -1.19, z: -0.0000038146973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1121583910}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.35}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 29.133}
 --- !u!65 &386671902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22724,7 +22724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &625906367
 Transform:
   m_ObjectHideFlags: 0
@@ -25324,13 +25324,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696785427}
-  m_LocalRotation: {x: -0, y: -0, z: 0.15945393, w: 0.9872054}
-  m_LocalPosition: {x: -0.3, y: -0.87, z: -0.0000038146973}
+  m_LocalRotation: {x: -0, y: -0, z: 0.22604565, w: 0.97411674}
+  m_LocalPosition: {x: 0.02, y: -1.12, z: -0.0000038146973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1434130100}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.35}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 26.129}
 --- !u!65 &696785429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25342,8 +25342,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.9370947, y: 3.18, z: 4}
-  m_Center: {x: -0.51854646, y: -0.0000009601353, z: 0}
+  m_Size: {x: 6.982089, y: 3.18, z: 4}
+  m_Center: {x: -1.0410197, y: -0.0000010691518, z: 0}
 --- !u!1 &697846546
 GameObject:
   m_ObjectHideFlags: 0
@@ -41930,7 +41930,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 13.4992075, y: -0.10000038, z: 5.4140344}
+  m_ConnectedAnchor: {x: 13.4992075, y: -0.10000801, z: 5.4140344}
   m_UseSpring: 1
   m_Spring:
     spring: 20
@@ -44064,7 +44064,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.2, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 15.54314, y: 0.289999, z: 5.826}
+  m_ConnectedAnchor: {x: 15.54314, y: 0.2899952, z: 5.826027}
   m_UseSpring: 1
   m_Spring:
     spring: 50
@@ -75399,7 +75399,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.1, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 13.4992075, y: -0.10000038, z: 5.4140496}
+  m_ConnectedAnchor: {x: 13.4992075, y: -0.10000801, z: 5.4140344}
   m_UseSpring: 1
   m_Spring:
     spring: 20
