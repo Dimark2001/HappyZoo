@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection.Emit;
+using System.Reflection;
 using System;
 using GameAnalyticsSDK.Utilities;
 using GameAnalyticsSDK.Setup;

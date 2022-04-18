@@ -1,4 +1,9 @@
-﻿namespace GameAnalyticsSDK.Wrapper
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using GameAnalyticsSDK.Utilities;
+
+namespace GameAnalyticsSDK.Wrapper
 {
     public partial class GA_Wrapper
     {

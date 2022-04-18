@@ -2,6 +2,8 @@
 /// This class handles business events, such as ingame purchases.
 /// </summary>
 
+using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using GameAnalyticsSDK.Wrapper;
 

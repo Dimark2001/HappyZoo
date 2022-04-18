@@ -1,8 +1,12 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using GameAnalyticsSDK.Events;
+using GameAnalyticsSDK.Setup;
 using GameAnalyticsSDK.Wrapper;
+using GameAnalyticsSDK.State;
+using System.Runtime.InteropServices;
 
 #if UNITY_EDITOR
 using UnityEditor;

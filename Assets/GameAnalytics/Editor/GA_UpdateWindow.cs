@@ -1,5 +1,8 @@
 using UnityEngine;
+using System.Collections;
 using UnityEditor;
+using System.Collections.Generic;
+using GameAnalyticsSDK.Setup;
 
 namespace GameAnalyticsSDK.Editor
 {
