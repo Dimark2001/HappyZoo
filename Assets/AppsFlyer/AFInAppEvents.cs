@@ -1,4 +1,7 @@
-﻿public class AFInAppEvents {
+﻿using UnityEngine;
+using System.Collections;
+
+public class AFInAppEvents {
 	/**
 	 * Event Type
 	 * */
