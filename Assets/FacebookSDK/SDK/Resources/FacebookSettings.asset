@@ -16,9 +16,9 @@ MonoBehaviour:
   clientTokens:
   - 
   appIds:
-  - 0
+  - 937510913600558
   appLabels:
-  - App Name
+  - Happy ZOO
   cookie: 1
   logging: 1
   status: 1
