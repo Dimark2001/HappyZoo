@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.446585, g: 0.49642205, b: 0.5748202, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658518, g: 0.49642253, b: 0.5748209, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14391,7 +14391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374038977}
   m_LocalRotation: {x: 0.39048597, y: -0.000000022401627, z: 0.000000009501889, w: 0.9206089}
-  m_LocalPosition: {x: 62.54, y: 487.49176, z: -890.66}
+  m_LocalPosition: {x: 62.54, y: 484.13, z: -887.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1197250168}
@@ -20149,6 +20149,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: dffdc580cba58ba48bf7d4ea28f4685d, type: 2}
+    - target: {fileID: -601018869012299972, guid: 1f4719cf568feed498400cbc6fca2fa7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.76
+      objectReference: {fileID: 0}
     - target: {fileID: -297989056005802193, guid: 1f4719cf568feed498400cbc6fca2fa7, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -41677,7 +41681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: -0.0034980774, y: 30.771767, z: -26.07427}
+  m_FollowOffset: {x: -0.0034980774, y: 27.410011, z: -22.82427}
   m_XDamping: 1.5
   m_YDamping: 1.5
   m_ZDamping: 1.5
@@ -53820,6 +53824,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: dffdc580cba58ba48bf7d4ea28f4685d, type: 2}
+    - target: {fileID: -601018869012299972, guid: 1f4719cf568feed498400cbc6fca2fa7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.78
+      objectReference: {fileID: 0}
     - target: {fileID: -297989056005802193, guid: 1f4719cf568feed498400cbc6fca2fa7, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -56042,7 +56050,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 376cf1aaada406e4891585079592bbd3, type: 2}
     - target: {fileID: -1538112130698044685, guid: 01111091528894e4b88f08639ea22232, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: -616835113395912383, guid: 01111091528894e4b88f08639ea22232, type: 3}
       propertyPath: m_CastShadows
@@ -63545,7 +63553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722701930}
   m_LocalRotation: {x: 0.39048597, y: -0.000000022401627, z: 0.000000009501889, w: 0.9206089}
-  m_LocalPosition: {x: 62.54, y: 487.49176, z: -890.66}
+  m_LocalPosition: {x: 62.54, y: 484.13, z: -887.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1118917436}
@@ -69839,7 +69847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fe20caf1bc39348b18fce0b9e01749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startMoney: 5000
+  _startMoney: 99999
   _isInfinite: 0
 --- !u!114 &1912308886
 MonoBehaviour:
@@ -82027,7 +82035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4767400413892501186}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.049352646, y: -0.0080161095, z: -0.07501221}
+  m_LocalPosition: {x: -0.049352646, y: -0.71, z: -0.07501221}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450653644286618}
