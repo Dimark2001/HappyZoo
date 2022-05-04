@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerWallet : MonoBehaviour
 {
+    [SerializeField] private int _startMoney = 5000;
     public int MoneyCount
     {
         get => moneyCount;
@@ -24,6 +25,6 @@ public class PlayerWallet : MonoBehaviour
 
     private void Start()
     {
-        MoneyCount = PlayerPrefs.GetInt("moneyCount", 5000);
+        MoneyCount = PlayerPrefs.GetInt("moneyCount", _startMoney);
     }
 }

@@ -9,6 +9,8 @@ public class Pedestal : MonoBehaviour
     [SerializeField] private Resource _resource;
     [SerializeField] private float _givingTime = 1f;
     [SerializeField] private Transform _origin;
+    [SerializeField] private bool _oneShot;
+    [SerializeField] private MeshRenderer _renderer;
 
     private TweenerCore<Vector3, Vector3, VectorOptions> _tweenerCore = null;
     private void OnTriggerEnter(Collider other)
@@ -43,25 +45,52 @@ public class Pedestal : MonoBehaviour
         var scaling = res.transform.DOScale(Vector3.one * 0.8f, _givingTime);
         var rotating = res.transform.DORotateQuaternion(resourcesStack.transform.rotation, _givingTime);
 
-        _tweenerCore = res.transform.DOMove(position, _givingTime);
-        _tweenerCore
-            .OnComplete(() =>
-            {
-                resourcesStack.AddResource(_resource);
-                if (resourcesStack.IsFull)
+        if (!_oneShot)
+        {
+            _tweenerCore = res.transform.DOMove(position, _givingTime);
+            _tweenerCore
+                .OnComplete(() =>
                 {
-                    _tweenerCore.Kill();
-                    return;
-                }
+                    resourcesStack.AddResource(_resource);
+                    if (resourcesStack.IsFull)
+                    {
+                        _tweenerCore.Kill();
+                        return;
+                    }
 
-                SpawnAndMoveResource(resourcesStack);
-            })
-            .OnKill(() =>
-            {
-                scaling.Kill();
-                rotating.Kill();
-                Destroy(res.gameObject);
-            });
-        _tweenerCore.SetEase(Ease.InQuad);
+                    SpawnAndMoveResource(resourcesStack);
+                })
+                .OnKill(() =>
+                {
+                    scaling.Kill();
+                    rotating.Kill();
+                    Destroy(res.gameObject);
+                });
+            _tweenerCore.SetEase(Ease.InQuad);
+        }
+        else
+        {
+            _renderer.enabled = false;
+            _tweenerCore = res.transform.DOMove(position, _givingTime / 3);
+            _tweenerCore
+                .OnComplete(() =>
+                {
+                    resourcesStack.AddResource(_resource);
+                    if (resourcesStack.IsFull)
+                    {
+                        _renderer.enabled = true;
+                        _tweenerCore.Kill();
+                    }
+                })
+                .OnKill(() =>
+                {
+                    scaling.Kill();
+                    rotating.Kill();
+                    Destroy(res.gameObject);
+                    Destroy(gameObject);
+                });
+            _tweenerCore.SetEase(Ease.InQuad);
+             
+        }
     }
 }
