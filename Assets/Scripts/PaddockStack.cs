@@ -18,7 +18,16 @@ public class PaddockStack : MonoBehaviour
         var res = Instantiate(resource);
         _resources.Add(res);
         UpdateView();
-        Vibration.Vibrate(pattern, -1);
+
+        try
+        {
+            Vibration.Vibrate(pattern, -1);
+        }
+        catch
+        {
+            Debug.Log("Vibration");
+        }
+        
     }
 
     private void RemoveOneResource()
