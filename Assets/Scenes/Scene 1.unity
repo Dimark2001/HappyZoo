@@ -1075,8 +1075,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 28651663}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1276950603}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &28651666
@@ -1390,8 +1390,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 31008260}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1054502433}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &31008263
@@ -2237,8 +2237,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 49468117}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 962288444}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &49468120
@@ -7614,8 +7614,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 189649716}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1408274164}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &189649718
@@ -10106,11 +10106,11 @@ PrefabInstance:
       objectReference: {fileID: 2023042883}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
@@ -11776,8 +11776,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 288275722}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 362660986}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &288275724
@@ -13235,8 +13235,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 341799580}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 57793696}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &341799582
@@ -17383,8 +17383,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 478634256}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 207897050}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &478634259
@@ -24876,8 +24876,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 677302260}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1314452880}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &677302262
@@ -25519,8 +25519,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 602117705}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1538487310}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &689988639
@@ -31392,8 +31392,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 877529866}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 2085071592}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &877529868
@@ -32466,8 +32466,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 886323158}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 755608300}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &886323161
@@ -35969,8 +35969,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 951829817}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 2068413473}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &951829820
@@ -42026,8 +42026,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 359851669}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1404889166}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1128234330
@@ -44381,8 +44381,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1192880016}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 974134629}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1192880018
@@ -47362,8 +47362,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1284980204}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1409196341}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1284980202
@@ -49223,8 +49223,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1332924905}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 402345343}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1332924908
@@ -50050,8 +50050,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1372205593}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 514781058}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1372205595
@@ -50207,8 +50207,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1372397431}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 685610780}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1372397433
@@ -50396,11 +50396,11 @@ PrefabInstance:
       objectReference: {fileID: 2037629064}
     - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4158970802199719664, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: m_Name
@@ -56700,8 +56700,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1532799028}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1748751907}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1532799026
@@ -57941,8 +57941,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1561608417}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 635449078}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1561608419
@@ -58726,8 +58726,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1593471651}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 90421133}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1593471653
@@ -58822,11 +58822,11 @@ PrefabInstance:
       objectReference: {fileID: 583870198}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
@@ -60827,11 +60827,11 @@ PrefabInstance:
       objectReference: {fileID: 2037629064}
     - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4158970802199719664, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: m_Name
@@ -61017,8 +61017,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1660313495}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 965751333}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1660313493
@@ -61768,11 +61768,11 @@ PrefabInstance:
       objectReference: {fileID: 2023042883}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
@@ -62299,8 +62299,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1794853241}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1949015259}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1687908880
@@ -65034,11 +65034,11 @@ PrefabInstance:
       objectReference: {fileID: 583870198}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
@@ -69001,8 +69001,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1882767889}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 881451856}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1882767887
@@ -69067,8 +69067,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1884082287}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 815566599}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1884082289
@@ -77300,11 +77300,11 @@ PrefabInstance:
       objectReference: {fileID: 2023042883}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
@@ -77694,8 +77694,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 2104667555}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 935515253}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &2104667553
@@ -79129,8 +79129,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 2124895160}
-  _minPoopingTime: 10
-  _maxPoopingTime: 15
+  _minPoopingTime: 6
+  _maxPoopingTime: 12
   _assHole: {fileID: 1178497705}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &2124895163
@@ -79377,11 +79377,11 @@ PrefabInstance:
       objectReference: {fileID: 583870198}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
@@ -81199,11 +81199,11 @@ PrefabInstance:
       objectReference: {fileID: 2037629064}
     - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: _maxPoopingTime
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: _minPoopingTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4158970802199719664, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: m_Name
