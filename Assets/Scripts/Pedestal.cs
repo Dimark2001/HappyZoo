@@ -45,30 +45,7 @@ public class Pedestal : MonoBehaviour
         var scaling = res.transform.DOScale(Vector3.one * 0.8f, _givingTime);
         var rotating = res.transform.DORotateQuaternion(resourcesStack.transform.rotation, _givingTime);
 
-        if (!_oneShot)
-        {
-            _tweenerCore = res.transform.DOMove(position, _givingTime);
-            _tweenerCore
-                .OnComplete(() =>
-                {
-                    resourcesStack.AddResource(_resource);
-                    if (resourcesStack.IsFull)
-                    {
-                        _tweenerCore.Kill();
-                        return;
-                    }
-
-                    SpawnAndMoveResource(resourcesStack);
-                })
-                .OnKill(() =>
-                {
-                    scaling.Kill();
-                    rotating.Kill();
-                    Destroy(res.gameObject);
-                });
-            _tweenerCore.SetEase(Ease.InQuad);
-        }
-        else
+        if (_oneShot)
         {
             _renderer.enabled = false;
             _tweenerCore = res.transform.DOMove(position, _givingTime / 3);
@@ -90,7 +67,30 @@ public class Pedestal : MonoBehaviour
                     Destroy(gameObject);
                 });
             _tweenerCore.SetEase(Ease.InQuad);
-             
+        }
+        else
+        {
+             _tweenerCore = res.transform.DOMove(position, _givingTime);
+            _tweenerCore
+                .OnComplete(() =>
+                {
+                    resourcesStack.AddResource(_resource);
+                    if (resourcesStack.IsFull)
+                    {
+                        Debug.Log("...");
+                        _tweenerCore.Kill();
+                        return;
+                    }
+                    Debug.Log("!!!");
+                    SpawnAndMoveResource(resourcesStack);
+                })
+                .OnKill(() =>
+                {
+                    scaling.Kill();
+                    rotating.Kill();
+                    Destroy(res.gameObject);
+                });
+            _tweenerCore.SetEase(Ease.InQuad);
         }
     }
 }

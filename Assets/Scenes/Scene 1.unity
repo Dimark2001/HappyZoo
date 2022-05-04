@@ -1075,8 +1075,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 28651663}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1276950603}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &28651666
@@ -1390,8 +1390,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 31008260}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1054502433}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &31008263
@@ -2237,8 +2237,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 49468117}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 962288444}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &49468120
@@ -6112,8 +6112,8 @@ Transform:
   - {fileID: 980628378}
   - {fileID: 483632857}
   - {fileID: 959421066}
-  - {fileID: 1593746732}
   - {fileID: 1759466744}
+  - {fileID: 1593746732}
   m_Father: {fileID: 828893196}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7614,8 +7614,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 189649716}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1408274164}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &189649718
@@ -10104,6 +10104,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 2023042883}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -11768,8 +11776,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 288275722}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 362660986}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &288275724
@@ -13227,8 +13235,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 341799580}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 57793696}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &341799582
@@ -17375,8 +17383,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 478634256}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 207897050}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &478634259
@@ -22708,9 +22716,9 @@ Transform:
   - {fileID: 1601159738}
   - {fileID: 1551539005}
   - {fileID: 1521045279}
+  - {fileID: 2124895158}
   - {fileID: 1153010680}
   - {fileID: 886323156}
-  - {fileID: 2124895158}
   m_Father: {fileID: 828893196}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24868,8 +24876,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 677302260}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1314452880}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &677302262
@@ -25511,8 +25519,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 602117705}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1538487310}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &689988639
@@ -30185,8 +30193,8 @@ Transform:
   - {fileID: 2046639876}
   - {fileID: 311814449}
   - {fileID: 1631041990}
-  - {fileID: 44990200}
   - {fileID: 1332924903}
+  - {fileID: 44990200}
   - {fileID: 478634254}
   m_Father: {fileID: 828893196}
   m_RootOrder: 3
@@ -31384,8 +31392,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 877529866}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 2085071592}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &877529868
@@ -32458,8 +32466,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 886323158}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 755608300}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &886323161
@@ -35961,8 +35969,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 951829817}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 2068413473}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &951829820
@@ -42018,8 +42026,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 359851669}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1404889166}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1128234330
@@ -44373,8 +44381,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1192880016}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 974134629}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1192880018
@@ -47354,8 +47362,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1284980204}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1409196341}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1284980202
@@ -49215,8 +49223,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1332924905}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 402345343}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1332924908
@@ -50042,8 +50050,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1372205593}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 514781058}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1372205595
@@ -50199,8 +50207,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1372397431}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 685610780}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1372397433
@@ -50386,6 +50394,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 2037629064}
+    - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4158970802199719664, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: m_Name
       value: Hyena_LOD2 (2)
@@ -56684,8 +56700,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1532799028}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1748751907}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1532799026
@@ -57925,8 +57941,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1561608417}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 635449078}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1561608419
@@ -58710,8 +58726,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1593471651}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 90421133}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1593471653
@@ -58804,6 +58820,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 583870198}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -60801,6 +60825,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 2037629064}
+    - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4158970802199719664, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: m_Name
       value: Hyena_LOD2 (1)
@@ -60985,8 +61017,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1660313495}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 965751333}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1660313493
@@ -61734,6 +61766,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 2023042883}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -62259,8 +62299,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1794853241}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1949015259}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1687908880
@@ -64992,6 +65032,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 583870198}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -65208,8 +65256,8 @@ Transform:
   - {fileID: 966500440}
   - {fileID: 2002979128}
   - {fileID: 1251779315}
-  - {fileID: 31008258}
   - {fileID: 28651661}
+  - {fileID: 31008258}
   m_Father: {fileID: 828893196}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -68953,8 +69001,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1882767889}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 881451856}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &1882767887
@@ -69019,8 +69067,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 1884082287}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 815566599}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!195 &1884082289
@@ -69728,6 +69776,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fe20caf1bc39348b18fce0b9e01749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startMoney: 5000
+  _isInfinite: 0
 --- !u!114 &1912308886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77248,6 +77298,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 2023042883}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -77636,8 +77694,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 2104667555}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 935515253}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &2104667553
@@ -79071,8 +79129,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 2124895160}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 10
+  _maxPoopingTime: 15
   _assHole: {fileID: 1178497705}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
 --- !u!135 &2124895163
@@ -79317,6 +79375,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 583870198}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272912232687220755, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7272912232687445042, guid: e625e1b00eb6a6a40acfd6880ccd1f8f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -81131,6 +81197,14 @@ PrefabInstance:
       propertyPath: _pointGiver
       value: 
       objectReference: {fileID: 2037629064}
+    - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
+      propertyPath: _maxPoopingTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158970802199619678, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
+      propertyPath: _minPoopingTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4158970802199719664, guid: 5729eaf28813a5e47bf010e0febf57c3, type: 3}
       propertyPath: m_Name
       value: Hyena_LOD2

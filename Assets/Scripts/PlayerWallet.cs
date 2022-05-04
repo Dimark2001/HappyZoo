@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerWallet : MonoBehaviour
 {
     [SerializeField] private int _startMoney = 5000;
+    [SerializeField] private bool _isInfinite;
+
     public int MoneyCount
     {
         get => moneyCount;
@@ -26,5 +28,9 @@ public class PlayerWallet : MonoBehaviour
     private void Start()
     {
         MoneyCount = PlayerPrefs.GetInt("moneyCount", _startMoney);
+        if (_isInfinite)
+        {
+            MoneyCount = 999999999;
+        }
     }
 }
