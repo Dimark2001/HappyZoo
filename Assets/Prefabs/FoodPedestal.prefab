@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resource: {fileID: 0}
-  _givingTime: 0.5
+  _givingTime: 0.1
   _origin: {fileID: 5992971240510807879}
+  _oneShot: 0
+  _renderer: {fileID: 0}
 --- !u!65 &5376492448505602001
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using GameAnalyticsSDK.Setup;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,6 +19,11 @@ public class Animal : MonoBehaviour
     [SerializeField] private float _maxPoopingTime = 40f;
     [SerializeField] private Transform _assHole;
     [SerializeField] private GameObject _poop;
+
+    [SerializeField] private GameObject _sleepingPrefab;
+    [SerializeField] private Transform _sleepingPoint;
+    private GameObject _sleepingObject;
+    
     private float _poopingTime => Random.Range(_minPoopingTime, _maxPoopingTime);
     
     private float _waitTime => Random.Range(_minWaitTime, _maxWaitTime);
@@ -50,15 +56,48 @@ public class Animal : MonoBehaviour
 
     private void GoHome()
     {
-        if (!GoTo(_homePoint.position))
+        Sleep();
+        
+        /*if (!GoTo(_homePoint.position))
         {
             transform.position = _homePoint.position;
         }
+        _hungry = true;*/
+    }
+    
+    private void Sleep()
+    {
+        _agent.enabled = false;
+        _animator.enabled = false;
+        var rotation = transform.rotation.eulerAngles;
+        var position = transform.position;
+        
+        transform.DORotate(new Vector3(rotation.x, rotation.y, 90), 0.5f).SetEase(Ease.OutBack);
+        transform.DOMove(new Vector3(position.x, position.y + 1, position.z), 0.5f).SetEase(Ease.OutBack);
+
+        _sleepingObject = Instantiate(_sleepingPrefab, _sleepingPoint);
+        _sleepingObject.transform.localPosition = Vector3.zero;
+        
         _hungry = true;
+    }
+    
+    private void Standup()
+    {
+        _agent.enabled = true;
+        _animator.enabled = true;
+        var rotation = transform.rotation.eulerAngles;
+        var position = transform.position;
+        
+        Destroy(_sleepingObject);
+        
+        transform.DORotate(new Vector3(rotation.x, rotation.y, 0), 0.5f).SetEase(Ease.OutBack);
+        transform.DOMove(new Vector3(position.x, position.y - 1, position.z), 0.5f).SetEase(Ease.OutBack);
     }
 
     private void GoOut()
     {
+        Standup();
+        
         var position = _paddock.paddockStack.PlaceToStand;
         if (!GoTo(position))
         {

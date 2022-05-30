@@ -406,6 +406,7 @@ Transform:
   - {fileID: 4158970802199491286}
   - {fileID: 4158970802199491268}
   - {fileID: 1355834052635726356}
+  - {fileID: 4536294965183504669}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 100.349, z: 0}
@@ -479,6 +480,8 @@ MonoBehaviour:
   _maxPoopingTime: 40
   _assHole: {fileID: 1355834052635726356}
   _poop: {fileID: 3593710413892613343, guid: c0eaeb8d399dd3c4fbf9d35befb28b9d, type: 3}
+  _sleepingPrefab: {fileID: 0}
+  _sleepingPoint: {fileID: 4536294965183504669}
 --- !u!195 &4158970802199619665
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -810,3 +813,33 @@ Transform:
   m_Father: {fileID: 4158970802199491280}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &8682234881838276572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4536294965183504669}
+  m_Layer: 0
+  m_Name: SleepingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4536294965183504669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8682234881838276572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4158970802199491280}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
