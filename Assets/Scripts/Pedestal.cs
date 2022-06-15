@@ -77,11 +77,9 @@ public class Pedestal : MonoBehaviour
                     resourcesStack.AddResource(_resource);
                     if (resourcesStack.IsFull)
                     {
-                        Debug.Log("...");
                         _tweenerCore.Kill();
                         return;
                     }
-                    Debug.Log("!!!");
                     SpawnAndMoveResource(resourcesStack);
                 })
                 .OnKill(() =>

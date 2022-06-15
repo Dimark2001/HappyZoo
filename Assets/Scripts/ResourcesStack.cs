@@ -28,14 +28,13 @@ public class ResourcesStack : MonoBehaviour
             Resources.Add(res);
             RecalculateHeight();
             OnStackChanged?.Invoke();
-            Debug.Log("!");
             try
             {
                 Vibration.Vibrate(pattern, -1);
             }
             catch
             {
-                Debug.Log("Vibration");
+                //Debug.Log("Vibration");
             }
             
         }

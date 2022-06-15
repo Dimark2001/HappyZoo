@@ -128,9 +128,20 @@ public class Customer : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         
-        int index = _currentZone._customersInQueue.FindIndex(x => x == this); 
+        try
+        {
+            int index = _currentZone._customersInQueue.FindIndex(x => x == this); 
 
-        TryGoTo(_currentZone._queue[index].position);
+            if (index != -1)
+            {
+                TryGoTo(_currentZone._queue[index].position);
+            }
+        }
+        catch
+        {
+            Debug.Log("Oy");
+        }
+        
         StartCoroutine(PeekNextPositionCoroutine());
     }
     
