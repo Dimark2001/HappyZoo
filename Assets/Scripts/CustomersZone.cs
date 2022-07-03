@@ -4,15 +4,14 @@ using UnityEngine;
 public class CustomersZone : MonoBehaviour
 {
     public bool IsWork = false;
+    public Vector3 direction = Vector3.right;
     
     [SerializeField] public List<Transform> _queue = new List<Transform>();
     [SerializeField] private List<Transform> _lookingPoints = new List<Transform>();
 
     public List<Customer> _customersInQueue = new List<Customer>();
     public List<Customer> _customersAtLookingPoints = new List<Customer>();
-
-    // НОВЫХ ПОСЕТИТЕЛЕЙ ДОЛЖЕН СОЗДАВАТЬ СПАУНЕР ОН ЖЕ БУДЕТ ОПРАШИВАТЬ КАСТОМЕР ЗОНЫ НА ТО НУЖНЫ ЛИ НОВЫЕ ПОСЕТИТЕЛИ И НЕ ДОСТИГЛИ ЛИ МЫ МАКСИМУМА
-
+    
     private void Awake()
     {
         for (int i = 0; i < _lookingPoints.Count; i++)

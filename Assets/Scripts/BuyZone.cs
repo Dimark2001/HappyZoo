@@ -1,4 +1,4 @@
-using System.Linq;
+using System;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
@@ -10,6 +10,8 @@ using DG.Tweening.Plugins.Options;
 [RequireComponent(typeof(Collider))]
 public class BuyZone : MonoBehaviour
 {
+    public Action OnBought;
+    
     [SerializeField] private int _zoneId = 0;
 
     [SerializeField] private float _openingTime = 3f;
@@ -23,19 +25,19 @@ public class BuyZone : MonoBehaviour
 
     [SerializeField] private CinemachineVirtualCamera _camera;
     [SerializeField] private GameObject[] _condition;
-    
+
+    private int _boughtConditions = 0;
     private PlayerWallet _wallet;
     private TweenerCore<int, int, NoOptions> _tweener;
     private TweenerCore<int, int, NoOptions> _tweener2;
     private float _progress => _currentCost / (float)_totalCost;
 
-    private void Update()
+    private void Awake()
     {
-        if (_condition.Length == 0 || _condition.All(x => !x.activeInHierarchy))
+        if (_condition == null || _condition.Length == 0 || _condition[0] == null) return;
+        foreach (var cond in _condition)
         {
-            GetComponent<Collider>().enabled = true;
-            GetComponentInChildren<Canvas>().enabled = true;
-            _countLabel.enabled = true;
+            cond.GetComponent<BuyZone>().OnBought += OnConditionBought;
         }
     }
 
@@ -46,6 +48,37 @@ public class BuyZone : MonoBehaviour
         if (_currentCost == 0)
         {
             Buy();
+        }
+
+        if (_condition == null || _condition.Length == 0 || _condition[0] == null)
+        {
+            Activate();
+        }
+    }
+
+    private void OnConditionBought()
+    {
+        _boughtConditions++;
+
+        if (_boughtConditions == _condition.Length)
+        {
+            Activate();
+        }
+    }
+
+    private void Activate()
+    {
+        GetComponent<Collider>().enabled = true;
+        GetComponentInChildren<Canvas>().enabled = true;
+        _countLabel.enabled = true;
+    }
+
+    private void OnDestroy()
+    {
+        if (_condition == null || _condition.Length == 0 || _condition[0] == null) return;
+        foreach (var cond in _condition)
+        {
+            cond.GetComponent<BuyZone>().OnBought -= OnConditionBought;
         }
     }
 
@@ -109,7 +142,7 @@ public class BuyZone : MonoBehaviour
         
         if (_toDeactivate != null)
             _toDeactivate.SetActive(false);
-        
+        OnBought?.Invoke();
         gameObject.SetActive(false);
     }
 }

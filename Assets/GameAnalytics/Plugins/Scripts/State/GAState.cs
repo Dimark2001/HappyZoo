@@ -1,9 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using GameAnalyticsSDK.Events;
-using GameAnalyticsSDK.Setup;
-using GameAnalyticsSDK.Wrapper;
 using System;
 
 namespace GameAnalyticsSDK.State

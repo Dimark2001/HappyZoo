@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-namespace GameAnalyticsSDK
+﻿namespace GameAnalyticsSDK
 {
 	public enum GAErrorSeverity
 	{

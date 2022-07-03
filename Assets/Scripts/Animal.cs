@@ -1,6 +1,5 @@
 using System.Collections;
 using DG.Tweening;
-using GameAnalyticsSDK.Setup;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;

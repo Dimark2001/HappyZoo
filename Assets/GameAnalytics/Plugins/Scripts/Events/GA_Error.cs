@@ -2,10 +2,7 @@
 /// This class handles quality (QA) events, such as crashes, fps, etc.
 /// </summary>
 
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using System;
 using GameAnalyticsSDK.Wrapper;
 
 namespace GameAnalyticsSDK.Events

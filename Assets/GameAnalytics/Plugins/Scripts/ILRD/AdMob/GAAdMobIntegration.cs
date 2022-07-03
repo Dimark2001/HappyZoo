@@ -1,9 +1,4 @@
-﻿using System;
-using UnityEngine;
-using System.Collections.Generic;
-using GameAnalyticsSDK.Utilities;
-
-public class GAAdMobIntegration
+﻿public class GAAdMobIntegration
 {
 #if gameanalytics_admob_enabled && !(UNITY_EDITOR)
 

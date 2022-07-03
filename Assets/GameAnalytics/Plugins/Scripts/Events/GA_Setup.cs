@@ -1,9 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using GameAnalyticsSDK.Utilities;
 using GameAnalyticsSDK.Wrapper;
-using GameAnalyticsSDK.Validators;
 
 namespace GameAnalyticsSDK.Events
 {

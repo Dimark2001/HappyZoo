@@ -1,7 +1,4 @@
 ﻿using System;
-using UnityEngine;
-using System.Collections.Generic;
-using GameAnalyticsSDK.Utilities;
 
 public class GAMaxIntegration
 {

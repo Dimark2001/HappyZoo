@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44060424c4822b24cb456df9785167c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _zoneId: 0
   _openingTime: 3
   _totalCost: 4000
   _currentCost: 0
@@ -52,6 +53,8 @@ MonoBehaviour:
   _countLabel: {fileID: 5145537120962309433}
   _toActivate: {fileID: 0}
   _toDeactivate: {fileID: 0}
+  _camera: {fileID: 0}
+  _condition: []
 --- !u!65 &373565195415370571
 BoxCollider:
   m_ObjectHideFlags: 0

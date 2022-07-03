@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -159,9 +160,13 @@ public class Customer : MonoBehaviour
 
             IsLooking = true;
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 8; i++)
             {
-                yield return new WaitForSeconds(_watchingTime/5);
+                yield return new WaitForSeconds(_watchingTime/8);
+                if (_agent.velocity.magnitude <= 0.1f)
+                {
+                    DOTween.To(() => transform.forward, x => transform.forward = x, _currentZone.direction, 0.5f);
+                }
                 if (!_currentZone.IsWork)
                 {
                     break;
