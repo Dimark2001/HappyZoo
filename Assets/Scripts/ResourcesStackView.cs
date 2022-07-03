@@ -5,8 +5,7 @@ using UnityEngine;
 public class ResourcesStackView : MonoBehaviour
 {
     [SerializeField] private Transform origin;
-    [SerializeField] private IKControl _ik;
-    
+
     private ResourcesStack _resourcesStack;
     private List<GameObject> _models = new List<GameObject>();
 
@@ -27,15 +26,7 @@ public class ResourcesStackView : MonoBehaviour
 
     private void UpdateView()
     {
-        if (_resourcesStack.Resources.Count == 0)
-        {
-            _ik.ikActive = false;
-        }
-        else
-        {
-            _ik.ikActive = true;
-        }
-        
+
         foreach (var resource in _resourcesStack.Resources)
         {
             resource.transform.parent = origin;
