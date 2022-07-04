@@ -650,6 +650,10 @@ PrefabInstance:
       propertyPath: _totalCost
       value: 18000
       objectReference: {fileID: 0}
+    - target: {fileID: 8716909269469121506, guid: ac20404673ef44a45a946975024e162f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac20404673ef44a45a946975024e162f, type: 3}
 --- !u!4 &58568404 stripped
@@ -2279,6 +2283,10 @@ PrefabInstance:
     - target: {fileID: 4690558427464803230, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
       propertyPath: _totalCost
       value: 25000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354355564841565949, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7444577933893696919, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
       propertyPath: m_Name
@@ -6666,7 +6674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145537120962309433, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _camera
@@ -6978,6 +6986,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 828893196}
     m_Modifications:
+    - target: {fileID: 997976068405533295, guid: a1cbeb5dcda81a143baa7af9b30ee991, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2073718769148479791, guid: a1cbeb5dcda81a143baa7af9b30ee991, type: 3}
       propertyPath: m_Name
       value: Flamingos
@@ -7228,6 +7240,10 @@ PrefabInstance:
       propertyPath: _totalCost
       value: 18000
       objectReference: {fileID: 0}
+    - target: {fileID: 3142774964839856993, guid: 4e944cf99f33cd443850fe10fe8818c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6701429226646316105, guid: 4e944cf99f33cd443850fe10fe8818c6, type: 3}
       propertyPath: m_Name
       value: Elephants
@@ -7400,7 +7416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145537120962309433, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _camera
@@ -7729,7 +7745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145537120962309433, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _camera
@@ -9392,6 +9408,10 @@ PrefabInstance:
       propertyPath: _totalCost
       value: 40000
       objectReference: {fileID: 0}
+    - target: {fileID: 4161535146883797125, guid: a717b5c8c9e79d14c82addd686c36472, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5124957278295088325, guid: a717b5c8c9e79d14c82addd686c36472, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10374,6 +10394,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 876245df87e76404bad380f52efd5297, type: 3}
   m_PrefabInstance: {fileID: 1583593066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1584645478 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2407022080368278869, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
+  m_PrefabInstance: {fileID: 2407022080853948622}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1601579522
 GameObject:
@@ -11749,6 +11774,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 828893196}
     m_Modifications:
+    - target: {fileID: 212183366387178084, guid: 0b84476a2e649254f9c8558b667e735e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2730886475494999815, guid: 0b84476a2e649254f9c8558b667e735e, type: 3}
       propertyPath: _zoneId
       value: 10
@@ -12379,7 +12408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145537120962309433, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953350969380188250, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: _camera
@@ -12627,7 +12656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startMoney: 99999
-  _isInfinite: 0
+  _isInfinite: 1
 --- !u!114 &1912308886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14431,6 +14460,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2407022080838147036, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
+      objectReference: {fileID: 1584645478}
+    - target: {fileID: 2407022080838147036, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 13.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407022080838147036, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407022080838147036, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2407022081080290213, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -14447,6 +14492,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 7354355564841565949, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7444577933893696919, guid: 2e9413d1914a5fd40b6f4495c20c0663, type: 3}
       propertyPath: m_Name
       value: Zebras
@@ -14674,6 +14723,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1722701931}
+    - target: {fileID: 8716909269469121506, guid: ac20404673ef44a45a946975024e162f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac20404673ef44a45a946975024e162f, type: 3}
 --- !u!4 &4580214097010151290 stripped
@@ -14688,6 +14741,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 828893196}
     m_Modifications:
+    - target: {fileID: 212183366387178084, guid: 0b84476a2e649254f9c8558b667e735e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2730886475494999815, guid: 0b84476a2e649254f9c8558b667e735e, type: 3}
       propertyPath: _camera
       value: 
@@ -14908,7 +14965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145537120962309433, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5145537120962309434, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: m_IsActive
@@ -14987,6 +15044,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 828893196}
     m_Modifications:
+    - target: {fileID: 997976068405533295, guid: a1cbeb5dcda81a143baa7af9b30ee991, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2073718769148479791, guid: a1cbeb5dcda81a143baa7af9b30ee991, type: 3}
       propertyPath: m_Name
       value: Flamingos
