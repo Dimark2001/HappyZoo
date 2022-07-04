@@ -75,7 +75,7 @@ public class Grass : MonoBehaviour
                     indicies[j] = j;
                 }
                 
-                if (positions.Count == 0)
+                if (positions.Count <= (_widthCount * _heightCount) * 0.2f)
                 {
                     _isMowed = true;
                     GrowGrass();

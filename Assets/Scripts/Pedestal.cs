@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using DG.Tweening;
 using DG.Tweening.Core;
@@ -10,9 +11,19 @@ public class Pedestal : MonoBehaviour
     [SerializeField] private float _givingTime = 1f;
     [SerializeField] private Transform _origin;
     [SerializeField] private bool _oneShot;
+    [SerializeField] private bool _shouldDestroy;
     [SerializeField] private MeshRenderer _renderer;
 
     private TweenerCore<Vector3, Vector3, VectorOptions> _tweenerCore = null;
+
+    private void Start()
+    {
+        if (_oneShot && _shouldDestroy)
+        {
+            Destroy(gameObject, 5);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out ResourcesStack resourcesStack))
