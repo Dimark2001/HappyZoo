@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
+using Unity.Mathematics;
 
 [RequireComponent(typeof(Collider))]
 public class BuyZone : MonoBehaviour
@@ -31,6 +33,8 @@ public class BuyZone : MonoBehaviour
     private TweenerCore<int, int, NoOptions> _tweener;
     private TweenerCore<int, int, NoOptions> _tweener2;
     private float _progress => _currentCost / (float)_totalCost;
+
+    private bool _isBuying;
 
     private void Awake()
     {
@@ -87,26 +91,9 @@ public class BuyZone : MonoBehaviour
         if (other.TryGetComponent(out _wallet))
         {
              DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 50, 0.5f);
-            
-            var money = _wallet.MoneyCount;
-            var time = _openingTime * (Mathf.Min(money, _currentCost) / (float)_totalCost);
-     
-            _tweener = DOTween.To(() => _currentCost, x => _currentCost = x,
-                    Mathf.Max(_currentCost - _wallet.MoneyCount, 0), time)
-                .SetEase(Ease.Linear)
-                .OnComplete(() =>
-                {
-                    if (_currentCost == 0)
-                    {
-                        PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
-                        PlayerPrefs.Save();
-                        Buy();
-                        DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 60, 0.5f);
-                    }
-                }).OnUpdate(UpdateLabel);
-            _tweener2 = DOTween.To(() => _wallet.MoneyCount, x => _wallet.MoneyCount = x,
-                Mathf.Max(_wallet.MoneyCount - _currentCost, 0), time).SetEase(Ease.Linear);
-         
+
+             _isBuying = true;
+             StartCoroutine(BuyingCoroutine());
         }
     }
 
@@ -114,12 +101,10 @@ public class BuyZone : MonoBehaviour
     {
         if (other.TryGetComponent(out _wallet))
         {
-            _tweener.Kill();
-            _tweener2.Kill();
-            
-            DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 60, 0.5f);
+            _isBuying = false;
             PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
             PlayerPrefs.Save();
+            DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 60, 0.5f);
         }
     }
     
@@ -144,5 +129,84 @@ public class BuyZone : MonoBehaviour
             _toDeactivate.SetActive(false);
         OnBought?.Invoke();
         gameObject.SetActive(false);
+    }
+
+    private IEnumerator BuyingCoroutine()
+    {
+        var startMoney = _wallet.MoneyCount;
+        var startCost = _currentCost;
+        var endMoney = Mathf.Max(startMoney - startCost, 0);
+        var endCost = Mathf.Max(startCost - startMoney, 0);
+        var time = (((float)(startCost - endCost)/_totalCost)) * _openingTime;
+
+        var timer = 0f;
+        var error = 0d;
+        while (true)
+        {
+            if (_isBuying == false)
+            {
+                yield break;
+            }
+            if (timer >= time)
+            {
+                break;
+            }
+
+            timer += Time.deltaTime;
+
+            var step = (startCost - endCost) * (Time.deltaTime / time);
+            error += Math.Truncate(step);
+            var intStep = Mathf.FloorToInt(step);
+            
+            if (error >= 1)
+            {
+                var errorInt = Mathf.FloorToInt((float)error);
+                intStep += errorInt;
+                error -= errorInt;
+            }
+
+            _wallet.MoneyCount -= intStep;
+            _currentCost -= intStep;
+
+            if (_currentCost <= 0)
+            {
+                _currentCost = 0;
+                _wallet.MoneyCount = endMoney;
+                PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
+                PlayerPrefs.Save();
+                Buy();
+                yield break;
+            }
+            
+            if (_wallet.MoneyCount <= 0)
+            {
+                _currentCost = endCost;
+                _wallet.MoneyCount = 0;
+                PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
+                PlayerPrefs.Save();
+                UpdateLabel();
+                yield break;
+            }
+            
+            UpdateLabel();
+            
+            yield return null;
+        }
+
+        _wallet.MoneyCount = endMoney;
+        _currentCost = endCost;
+        
+        if (_currentCost <= 0)
+        {
+            _currentCost = 0;
+            _wallet.MoneyCount = endMoney;
+            PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
+            PlayerPrefs.Save();
+            Buy();
+            yield break;
+        }
+        PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
+        PlayerPrefs.Save();
+        UpdateLabel();
     }
 }

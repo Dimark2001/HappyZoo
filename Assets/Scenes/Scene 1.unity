@@ -12655,8 +12655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fe20caf1bc39348b18fce0b9e01749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startMoney: 99999
-  _isInfinite: 1
+  _startMoney: 5000
+  _isInfinite: 0
 --- !u!114 &1912308886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14902,6 +14902,10 @@ PrefabInstance:
     - target: {fileID: 401940075059365438, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: m_Name
       value: BuyZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 401940075059365438, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1891127420210382813, guid: 6efe5ff4eaee2644680bb07fefbd5824, type: 3}
       propertyPath: m_RootOrder
