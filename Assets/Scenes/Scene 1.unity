@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.446585, g: 0.49642205, b: 0.5748202, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658518, g: 0.49642253, b: 0.5748209, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3461,6 +3461,118 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4361392707651793037, guid: 7ad1f7dd784b78b479faa4c7a607755f, type: 3}
   m_PrefabInstance: {fileID: 1420439426}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &513085862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513085866}
+  - component: {fileID: 513085865}
+  - component: {fileID: 513085864}
+  - component: {fileID: 513085863}
+  m_Layer: 0
+  m_Name: CASManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &513085863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513085862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dca420af8994f1396ba88695765563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managerId:
+    android: 0
+    ios: 0
+  OnAdLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdFailedToLoad:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdFailedToShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdShown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdClicked:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdClosed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &513085864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513085862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843e5b43b4dcf427780c1376ee0473ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managerId:
+    android: 0
+    ios: 0
+  adPosition: 3
+  adOffset: {x: 0, y: 0}
+  adSize: 1
+  OnAdLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdFailedToLoad:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdShown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdClicked:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAdHidden:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &513085865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513085862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2229abca57c6647b8d8f8d8137d0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IterstitialTimer: 45
+--- !u!4 &513085866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513085862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &526800354
 GameObject:
   m_ObjectHideFlags: 0
