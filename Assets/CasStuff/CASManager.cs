@@ -34,7 +34,7 @@ public class CASManager : MonoBehaviour
 			// Call Initialize method in any case to get IMediationManager instance
 			.Initialize();
 
-		CAS.MobileAds.ValidateIntegration();
+		//CAS.MobileAds.ValidateIntegration();
 
 		IAdView adView = _manager.GetAdView(AdSize.Banner);
 		adView.Load();
