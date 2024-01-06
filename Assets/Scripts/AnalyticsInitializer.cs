@@ -6,8 +6,6 @@ public class AnalyticsInitializer : MonoBehaviour
 {
     void Awake()
     {
-        GameAnalytics.Initialize();
-	    
         if (!FB.IsInitialized)
         {
             FB.Init(InitCallback, OnHideUnity);

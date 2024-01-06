@@ -15,18 +15,23 @@ public class PigFarm : MonoBehaviour
     
     public Vector3 GetPoint()
     {
-        var boxSize = _box.size;
-        var boxCenter = _box.center;
-        var width = boxSize.x;
-        var depth = boxSize.z;
+        if (_box != null)
+        {
+            var boxSize = _box.size;
+            var boxCenter = _box.center;
+            var width = boxSize.x;
+            var depth = boxSize.z;
 
-        var x = Random.Range(-width / 2, width / 2);
-        var z = Random.Range(-depth / 2, depth / 2);
+            var x = Random.Range(-width / 2, width / 2);
+            var z = Random.Range(-depth / 2, depth / 2);
 
-        var localPoint = new Vector3(boxCenter.x + x, 0, boxCenter.z + z);
-        var globalPoint = transform.TransformPoint(localPoint);
+            var localPoint = new Vector3(boxCenter.x + x, 0, boxCenter.z + z);
+            var globalPoint = transform.TransformPoint(localPoint);
         
-        return globalPoint;
+            return globalPoint;
+        }
+        
+        return Vector3.zero;
     }
 
     private void SpawnPig()

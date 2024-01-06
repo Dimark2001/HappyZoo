@@ -52,22 +52,25 @@ public class Pig : MonoBehaviour
         while (true)
         {
             var position = transform.position;
-            var point = pigFarm.GetPoint();
+            if (pigFarm != null)
+            {
+                var point = pigFarm.GetPoint();
             
-            var distance = Vector3.Distance(position, point);
-            var walkTime = distance / _speed;
+                var distance = Vector3.Distance(position, point);
+                var walkTime = distance / _speed;
 
-            transform.DOLookAt(point, 0.5f, AxisConstraint.X | AxisConstraint.Z);
-            transform.DOMove(point, walkTime).SetEase(Ease.Linear).OnComplete(() => _isStanding = true);
-            _isStanding = false;
-            _animator.SetTrigger("Walk");
-            
-            yield return new WaitForSeconds(walkTime);
-            
-            
+                transform.DOLookAt(point, 0.5f, AxisConstraint.X | AxisConstraint.Z);
+                transform.DOMove(point, walkTime).SetEase(Ease.Linear).OnComplete(() => _isStanding = true);
+                _isStanding = false;
+                if (_animator != null) _animator.SetTrigger("Walk");
+
+                yield return new WaitForSeconds(walkTime);
+            }
+
+
             _isStanding = true;
-            
-            _animator.SetTrigger("Idle");
+
+            if (_animator != null) _animator.SetTrigger("Idle");
             yield return new WaitForSeconds(_waitTime);
         }
     }

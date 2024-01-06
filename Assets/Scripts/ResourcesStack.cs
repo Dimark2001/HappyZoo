@@ -17,7 +17,6 @@ public class ResourcesStack : MonoBehaviour
 
     private void Start()
     {
-        Vibration.Init();
     }
 
     public void AddResource(Resource resource)
@@ -30,7 +29,6 @@ public class ResourcesStack : MonoBehaviour
             OnStackChanged?.Invoke();
             try
             {
-                Vibration.Vibrate(pattern, -1);
             }
             catch
             {

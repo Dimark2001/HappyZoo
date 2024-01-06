@@ -165,8 +165,41 @@ public class BuyZone : MonoBehaviour
                 error -= errorInt;
             }
 
-            _wallet.MoneyCount -= intStep;
-            _currentCost -= intStep;
+            if (_wallet != null)
+            {
+                _wallet.MoneyCount -= intStep;
+                _currentCost -= intStep;
+
+                if (_currentCost <= 0)
+                {
+                    _currentCost = 0;
+                    _wallet.MoneyCount = endMoney;
+                    PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
+                    PlayerPrefs.Save();
+                    Buy();
+                    yield break;
+                }
+
+                if (_wallet.MoneyCount <= 0)
+                {
+                    _currentCost = endCost;
+                    _wallet.MoneyCount = 0;
+                    PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
+                    PlayerPrefs.Save();
+                    UpdateLabel();
+                    yield break;
+                }
+            }
+
+            UpdateLabel();
+            
+            yield return null;
+        }
+
+        if (_wallet != null)
+        {
+            _wallet.MoneyCount = endMoney;
+            _currentCost = endCost;
 
             if (_currentCost <= 0)
             {
@@ -177,34 +210,8 @@ public class BuyZone : MonoBehaviour
                 Buy();
                 yield break;
             }
-            
-            if (_wallet.MoneyCount <= 0)
-            {
-                _currentCost = endCost;
-                _wallet.MoneyCount = 0;
-                PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
-                PlayerPrefs.Save();
-                UpdateLabel();
-                yield break;
-            }
-            
-            UpdateLabel();
-            
-            yield return null;
         }
 
-        _wallet.MoneyCount = endMoney;
-        _currentCost = endCost;
-        
-        if (_currentCost <= 0)
-        {
-            _currentCost = 0;
-            _wallet.MoneyCount = endMoney;
-            PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
-            PlayerPrefs.Save();
-            Buy();
-            yield break;
-        }
         PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
         PlayerPrefs.Save();
         UpdateLabel();

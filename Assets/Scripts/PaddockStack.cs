@@ -21,7 +21,6 @@ public class PaddockStack : MonoBehaviour
 
         try
         {
-            Vibration.Vibrate(pattern, -1);
         }
         catch
         {
