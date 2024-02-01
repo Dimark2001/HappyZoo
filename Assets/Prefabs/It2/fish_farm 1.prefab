@@ -120,6 +120,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5416696794983864355}
     m_Modifications:
+    - target: {fileID: 2057843560406691732, guid: 1a327dcbc1bee1b42848752cd8540c9c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2256107072568812786, guid: 1a327dcbc1bee1b42848752cd8540c9c, type: 3}
       propertyPath: m_Name
       value: StylizedWater_Toon

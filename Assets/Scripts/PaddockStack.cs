@@ -7,8 +7,10 @@ using Random = UnityEngine.Random;
 public class PaddockStack : MonoBehaviour
 {
     public Action Emptied;
+    public Action OnFoodRemoved;
     public Vector3 PlaceToStand => origin.position + new Vector3(Random.Range(-4f, 4f),0, Random.Range(-4f, 4f));
     public Transform origin;
+    public int neededFood;
     
     private List<Resource> _resources = new List<Resource>();
     private long[] pattern = { 0, 10, 20, 20};
@@ -18,26 +20,19 @@ public class PaddockStack : MonoBehaviour
         var res = Instantiate(resource);
         _resources.Add(res);
         UpdateView();
-
-        try
-        {
-        }
-        catch
-        {
-            Debug.Log("Vibration");
-        }
-        
     }
 
     private void RemoveOneResource()
     {
-        if (_resources.Count > 0)
+        if (neededFood > 0)
         {
             Destroy(_resources[0].gameObject);
             _resources.RemoveAt(0);
+            OnFoodRemoved?.Invoke();
+            neededFood--;
         }
 
-        if (_resources.Count == 0)
+        if (neededFood <= 0)
         {
             Emptied?.Invoke();
         }
@@ -92,7 +87,7 @@ public class PaddockStack : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         RemoveOneResource();
-        if (_resources.Count == 0)
+        if (neededFood <= 0)
         {
             StopCoroutine(Eat());
             yield break;

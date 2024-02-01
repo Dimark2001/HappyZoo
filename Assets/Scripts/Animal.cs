@@ -56,12 +56,6 @@ public class Animal : MonoBehaviour
     private void GoHome()
     {
         Sleep();
-        
-        /*if (!GoTo(_homePoint.position))
-        {
-            transform.position = _homePoint.position;
-        }
-        _hungry = true;*/
     }
     
     private void Sleep()
@@ -71,8 +65,8 @@ public class Animal : MonoBehaviour
         var rotation = transform.rotation.eulerAngles;
         var position = transform.position;
         
-        transform.DORotate(new Vector3(rotation.x, rotation.y, 90), 0.5f).SetEase(Ease.OutBack);
-        transform.DOMove(new Vector3(position.x, position.y + 1, position.z), 0.5f).SetEase(Ease.OutBack);
+        transform.DORotate(new Vector3(rotation.x, rotation.y, 90), 0.3f).SetEase(Ease.OutBack);
+        transform.DOMove(new Vector3(position.x, position.y + 1, position.z), 0.3f).SetEase(Ease.OutBack);
 
         _sleepingObject = Instantiate(_sleepingPrefab, _sleepingPoint);
         _sleepingObject.transform.localPosition = Vector3.zero;
@@ -89,8 +83,8 @@ public class Animal : MonoBehaviour
         
         Destroy(_sleepingObject);
         
-        transform.DORotate(new Vector3(rotation.x, rotation.y, 0), 0.5f).SetEase(Ease.OutBack);
-        transform.DOMove(new Vector3(position.x, position.y - 1, position.z), 0.5f).SetEase(Ease.OutBack);
+        transform.DORotate(new Vector3(rotation.x, rotation.y, 0), 0.3f).SetEase(Ease.OutBack);
+        transform.DOMove(new Vector3(position.x, position.y - 1, position.z), 0.3f).SetEase(Ease.OutBack);
     }
 
     private void GoOut()
@@ -108,9 +102,11 @@ public class Animal : MonoBehaviour
 
     private bool GoTo(Vector3 position)
     {
-        NavMeshPath path = new NavMeshPath();
-        bool result = _agent.CalculatePath(position, path);
-        bool result1 = _agent.SetPath(path);
+        if (!_agent.isActiveAndEnabled)
+            return false;
+        var path = new NavMeshPath();
+        var result = _agent.CalculatePath(position, path);
+        var result1 = _agent.SetPath(path);
 
         return result && result1;
     }

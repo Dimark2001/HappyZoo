@@ -378,8 +378,8 @@ MonoBehaviour:
   _minWaitTime: 1
   _maxWaitTime: 3
   _animator: {fileID: 0}
-  _minPoopingTime: 20
-  _maxPoopingTime: 40
+  _minPoopingTime: 4
+  _maxPoopingTime: 7
   _assHole: {fileID: 0}
   _poop: {fileID: 0}
   _sleepingPrefab: {fileID: 0}
@@ -414,7 +414,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7272912232687220754}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

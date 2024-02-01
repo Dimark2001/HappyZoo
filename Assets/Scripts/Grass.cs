@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter))]
 public class Grass : MonoBehaviour
 {
+    public NewGrass newGrass;
     public List<Vector3> positions = new List<Vector3>();
     public List<Color> colors = new List<Color>();
     public List<int> indicies = new List<int>();
@@ -44,6 +45,7 @@ public class Grass : MonoBehaviour
         }
         
         UpdateMesh();
+        newGrass.ResetGrass();
     }
 
     public int RemoveInRadius(Vector3 center, float radius)
@@ -98,7 +100,6 @@ public class Grass : MonoBehaviour
 
     private void GenerateGrass()
     {
-        
         var xDistance = (float) _width / _widthCount;
         var zDistance = (float) _height / _heightCount;
 

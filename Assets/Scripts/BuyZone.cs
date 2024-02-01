@@ -88,18 +88,19 @@ public class BuyZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out _wallet))
+        if (other.TryGetComponent(out PlayerWallet wallet))
         {
              DOTween.To(() => _camera.m_Lens.FieldOfView, x => _camera.m_Lens.FieldOfView = x, 50, 0.5f);
 
              _isBuying = true;
+             _wallet = wallet;
              StartCoroutine(BuyingCoroutine());
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent(out _wallet))
+        if (other.TryGetComponent(out PlayerWallet wallet))
         {
             _isBuying = false;
             PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);
@@ -137,7 +138,7 @@ public class BuyZone : MonoBehaviour
         var startCost = _currentCost;
         var endMoney = Mathf.Max(startMoney - startCost, 0);
         var endCost = Mathf.Max(startCost - startMoney, 0);
-        var time = (((float)(startCost - endCost)/_totalCost)) * _openingTime;
+        var time = (float)(startCost - endCost)/_totalCost * _openingTime;
 
         var timer = 0f;
         var error = 0d;
@@ -190,6 +191,10 @@ public class BuyZone : MonoBehaviour
                     yield break;
                 }
             }
+            else
+            {
+                Debug.Log("walletNull");
+            }
 
             UpdateLabel();
             
@@ -210,6 +215,10 @@ public class BuyZone : MonoBehaviour
                 Buy();
                 yield break;
             }
+        }
+        else
+        {
+            Debug.Log("walletNull");
         }
 
         PlayerPrefs.SetInt(_zoneId.ToString(), _currentCost);

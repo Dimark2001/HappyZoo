@@ -88,7 +88,10 @@ public class FoodDataCollector : MonoBehaviour
         {
             if (paddock.isActiveAndEnabled)
             {
-                result += paddock.CountOfResource;
+                var a = paddock.NeededFood - paddock.PaddockHasFood;
+                if(a <= 0)
+                    continue;
+                result += a;
             }
             
         }

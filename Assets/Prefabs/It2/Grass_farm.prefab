@@ -121,6 +121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3912233500047260541}
     m_Modifications:
+    - target: {fileID: 2513733690410055457, guid: 09d95364f10d43143a9784c2c6532227, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2513733690410055459, guid: 09d95364f10d43143a9784c2c6532227, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -169,10 +173,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass
       objectReference: {fileID: 0}
+    - target: {fileID: 2947348274079564382, guid: 09d95364f10d43143a9784c2c6532227, type: 3}
+      propertyPath: newGrass
+      value: 
+      objectReference: {fileID: 1248115278105856332}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09d95364f10d43143a9784c2c6532227, type: 3}
+--- !u!1 &198092708915299390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2513733690410055487, guid: 09d95364f10d43143a9784c2c6532227, type: 3}
+  m_PrefabInstance: {fileID: 2332116105707877121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &198092708915299362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2513733690410055459, guid: 09d95364f10d43143a9784c2c6532227, type: 3}
   m_PrefabInstance: {fileID: 2332116105707877121}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1248115278105856332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198092708915299390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e40a81758c7514c957f5f6f70b75d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grass: {fileID: 5098166735730487887, guid: e1911aeff5cba5f47861e9584df91e0e, type: 3}
+  grassParent: {fileID: 198092708915299362}
+  grassList: []

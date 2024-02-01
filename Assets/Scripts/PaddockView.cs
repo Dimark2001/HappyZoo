@@ -27,8 +27,11 @@ public class PaddockView : MonoBehaviour
 
     private void DrawIndicator()
     {
+        if(_paddock.NeededFood <= 0)
+            return;
         _indicator.SetActive(true);
-        _textMesh.text = _paddock.CountOfResource.ToString();
+        var a = _paddock.NeededFood - _paddock.PaddockHasFood;
+        _textMesh.text = a.ToString();
     }
 
     private void HideIndicator()

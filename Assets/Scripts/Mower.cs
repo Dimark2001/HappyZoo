@@ -20,6 +20,11 @@ public class Mower : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Grass"))
+        {
+            other.gameObject.SetActive(false);
+            return;
+        }
         if (other.TryGetComponent(out Grass grass))
         {
             _isActive = true;

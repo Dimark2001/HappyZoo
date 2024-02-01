@@ -29,12 +29,14 @@ public class Paddock : MonoBehaviour
     public Action OnFood;
     public Action OnGetHungry;
     public PaddockStack paddockStack;
-    public int CountOfResource => _countOfResource;
+    public int NeededFood => _neededFood;
+    public int PaddockHasFood => paddockHasFood;
 
     [SerializeField] private CustomersZone _customersZone;
 
     [SerializeField] private Resource _necessaryResource;
-    [SerializeField] private int _countOfResource = 5;
+    [SerializeField] private int _neededFood = 5;
+    [SerializeField] private int paddockHasFood = 0;
 
     [SerializeField] private int _minCountOfResource = 4;
     [SerializeField] private int _maxCountOfResource = 10;
@@ -56,6 +58,7 @@ public class Paddock : MonoBehaviour
     private void Awake()
     {
         paddockStack = GetComponent<PaddockStack>();
+        paddockStack.OnFoodRemoved += RemoveOneFood;
     }
 
     private void Start()
@@ -77,6 +80,11 @@ public class Paddock : MonoBehaviour
         OnAte -= RestartSatiety;
     }
 
+    private void RemoveOneFood()
+    {
+        paddockHasFood--;
+    }
+    
     private void RestartSatiety()
     {
         StartCoroutine(SatietyLoop());
@@ -86,7 +94,7 @@ public class Paddock : MonoBehaviour
     {
         if (other.TryGetComponent(out ResourcesStack resourcesStack))
         {
-            if (_countOfResource > 0 && _isWantToEat)
+            if (_isWantToEat)
             {
                 TakeFood(resourcesStack);
             }
@@ -130,15 +138,19 @@ public class Paddock : MonoBehaviour
                 bool result = resourcesStack.TryRemoveResource(res);
                 if (result)
                 {
-                    _countOfResource--;
+                    paddockHasFood++;
                     CountOfResourceChanged?.Invoke();
                     paddockStack.AddResource(res);
-
-                    if (_countOfResource == 0)
+                    if (_neededFood == paddockHasFood)
                     {
                         OnAte?.Invoke();
                         _customersZone.IsWork = true;
                         _isWantToEat = false;
+                        _neededFood = 0;
+                    }
+
+                    if (paddockHasFood >= 10)
+                    {
                         _tweenerCore.Kill();
                         return;
                     }
@@ -157,16 +169,21 @@ public class Paddock : MonoBehaviour
 
     private void GetHungry()
     {
-        _countOfResource = Random.Range(_minCountOfResource, _maxCountOfResource);
+        _neededFood = Random.Range(_minCountOfResource, _maxCountOfResource);
+        if (paddockHasFood != 0)
+        {
+            if (_neededFood <= paddockHasFood)
+                _neededFood = paddockHasFood + 1;
+        }
+        
+        paddockStack.neededFood = _neededFood;
         CountOfResourceChanged?.Invoke();
         _customersZone.IsWork = false;
         OnGetHungry?.Invoke();
-
         if (tutor == 0)
         {
             PlayTutorial();
         }
-        
     }
 
     private void PlayTutorial()

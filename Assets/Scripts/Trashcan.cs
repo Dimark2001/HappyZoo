@@ -7,7 +7,9 @@ public class Trashcan : MonoBehaviour
 {
     [SerializeField] private float _takingTime = 0.5f;
     [SerializeField] private Transform _foodTakerPosition;
+    [SerializeField] private GameObject arrow;
     private TweenerCore<Vector3, Vector3, VectorOptions> _tweenerCore;
+    
     
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +18,10 @@ public class Trashcan : MonoBehaviour
             if (resourcesStack.Resources.Count > 0)
             {
                 TakeFood(resourcesStack);
+                if (arrow != null && arrow.activeSelf)
+                {
+                    arrow.SetActive(false);
+                }
             }
         }
     }
